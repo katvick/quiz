@@ -90,28 +90,6 @@ function gatherCardData(number) {
         }
     })
 
-    // var radioValues = currentCard.querySelectorAll('[type="radio"]');
-    // // обходим кнопки циклом
-    // radioValues.forEach(function(item) {
-    //     if (item.checked) {
-    //         result.push({
-    //             name: item.name,
-    //             value: item.value
-    //         })
-    //     }
-    // })
-
-    // // ----- 2. Находим все заполненные значения из чекбоксов
-    // var checkBoxValues = currentCard.querySelectorAll('[type="checkbox"]');
-    // checkBoxValues.forEach(function(item) {
-    //     if (item.checked) {
-    //         result.push({
-    //             name: item.name,
-    //             value: item.value
-    //         })
-    //     }
-    // })
-
     // ----- 3. Находим все заполненные эл-ты из инпутов
     var inputValues = currentCard.querySelectorAll('[type="text"], [type="number"], [type="email"]');
     inputValues.forEach(function(item) {
@@ -139,15 +117,6 @@ function saveAnswer(number, data) {
     answers[number] = data
 }
 
-// Ф-я проверки на заполненность
-// function isFilled(number){
-//     if (answers[number].answer.length > 0) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
-
 // Ф-я для проверки email
 function validateEmail(email) {
     var pattern = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
@@ -170,29 +139,6 @@ function checkOnRequired(number) {
     })
 
     return isValidArray;
-
-    // // Проверка
-    // requiredFields.forEach(function(item) {
-
-    //     if (item.type == 'checkbox' && item.checked == false) {
-    //         isValidArray.push(false);
-
-    //     } else if (item.type == 'email') {
-    //         if (validateEmail(item.value)) {
-    //             isValidArray.push(true);
-    //         } else {
-    //             isValidArray.push(false);
-    //         }
-    //     }
-    // })
-
-    // // Проверяем, есть ли false в массиве isValidArray
-    //     // isValidArray.indexOf(false) -> вернет индекс элемента, под который находится false. Eсли false нет, то вернется -1
-    // if (isValidArray.indexOf(false) == -1) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
 }
 
 //Подсвечиваем рамку у радиокнопок
