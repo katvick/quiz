@@ -36,7 +36,7 @@ btnNext.forEach( function(button) {
             } else {
                 alert('Сделайте ответ, прежде чем переходить далее')
             }
-        };
+        }
     })
 })
 
@@ -107,8 +107,7 @@ function gatherCardData(number) {
         answer: result
     }
 
-    return data
-
+    return data;
 }
 
 // Ф-я записи ответа в объект с ответами
@@ -155,7 +154,7 @@ document.querySelectorAll('.radio-group').forEach(function(item) {
             label.classList.add('radio-block--active');
         }
     })
-});
+})
 
 // Подсвечиваем рамку у чекбоксов
 document.querySelectorAll('label.checkbox-block input[type="checkbox"]').forEach(function(item) {
